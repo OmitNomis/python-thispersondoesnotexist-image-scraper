@@ -1,5 +1,6 @@
 import requests
 import os
+import time
 from datetime import datetime
 
 folder = datetime.now().strftime('%Y%m%d%H%M%S')
@@ -12,6 +13,7 @@ def download(fileName):
     file.write(requests.get('https://thispersondoesnotexist.com/image', headers={'User-Agent': 'My User Agent 1.0'}).content)
     file.close()
     print ("\n\t{} created".format(fileName))
+    time.sleep(1)
 
 for i in range(iterations):
      download(str(i+1)+'.jpg')
