@@ -3,11 +3,11 @@ import os
 import time
 from datetime import datetime
 
-folder = datetime.now().strftime('%Y%m%d%H%M%S')
+folder = datetime.now().strftime('%Y%m%d%H%M%S') #creating folder with date+time to make unique name
 iterations = int(input("\nHow many images do you want to scrape? "))
-os.mkdir(folder)
+os.mkdir(folder) #creating new folder everytime so that images don't get overridden
 
-print ("\nDirectory created with name {}".format(folder))
+print ("\nDirectory created with name {}".format(folder)) 
 def download(fileName):
     file = open(os.path.join(folder, fileName),'wb')
     file.write(requests.get('https://thispersondoesnotexist.com/image', headers={'User-Agent': 'My User Agent 1.0'}).content)
@@ -19,4 +19,4 @@ for i in range(iterations):
      download(str(i+1)+'.jpg')
 
 print ("\n{} images successfully generated!".format(iterations))
-input("\nPress any key to exit...")
+input("\nPress Enter to exit...")
