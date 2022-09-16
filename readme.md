@@ -7,7 +7,7 @@ This is a script that allows users to scrap and download multiple images from th
 ### For Command Line Users
 
 Step 1:
-```git clone https://github.com/OmitNomis/python-thispersondoesnotexist-image-scraper```
+```git clone https://github.com/OmitNomis/python-thispersondoesnotexist-image-scraper.git```
 
 Step 2: 
 ```cd python-thispersondoesnotexist-image-scraper```
